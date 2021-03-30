@@ -1,0 +1,9 @@
+{
+  /* some component local key */
+  myInterestingText: {
+    cz: 'text',
+    en: 'text',
+    de: 'die Texte',
+    ru: 'текст'
+  }
+}
