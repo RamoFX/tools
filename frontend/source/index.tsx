@@ -1,8 +1,5 @@
 import React from 'react'
 import { render } from 'react-dom'
-//import serviceworker from '@serviceworker/index'
+import MainLayout from '@components/layouts/Main'
 
-render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('root')
-)
+render(<MainLayout />, document.getElementById('root'))
