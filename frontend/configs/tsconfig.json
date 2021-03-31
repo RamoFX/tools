@@ -32,8 +32,7 @@
       "@assets/*": [ "./assets/*" ],
       "@components/*": [ "./components/*" ],
       "@data/*": [ "./data/*" ],
-      "@modules/*": [ "./modules/*" ],
-      "@serviceworker/*": [ "./serviceworker/*" ]
+      "@modules/*": [ "./modules/*" ]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
