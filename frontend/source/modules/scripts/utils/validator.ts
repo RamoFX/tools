@@ -9,16 +9,18 @@ export class Validator<T extends string | number> {
     public include: Array<T> = [],
     public exclude: Array<T> = [],
     public throwErrors: boolean = true
-  ) { 
+  ) {
     /*\
-     *  remove duplicates and intersection
+     *  remove duplicates and intersection if arrays are present
      *  example: [0, 1, 2, 3, 3] (include array) and [-2, -2, -1, 0] (exclude array) become [1, 2, 3] (include array) and [-2, -1] (exclude array)
     \*/
-    [include, exclude] = [include, exclude].map( (arr, idx) =>
-      [...new Set(arr)].filter( el =>
-        !(idx == 0 ? exclude : include).includes(el)
+    if (include.length && exclude.length ) {
+      [include , exclude] = [include, exclude].map( (arr, idx) =>
+        [...new Set(arr)].filter( el =>
+          !(idx == 0 ? exclude : include).includes(el)
+        )
       )
-    )
+    }
   }
 
   public validate(value: T): ValidationResult {
