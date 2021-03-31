@@ -72,7 +72,7 @@ module.exports = {
       '@assets': path('source/assets'),
       '@components': path('source/components'),
       '@data': path('source/data'),
-      '@helpers': path('source/helpers'),
+      '@modules': path('source/modules'),
       '@serviecworker': path('source/serviecworker')
     }
   }

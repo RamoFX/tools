@@ -32,7 +32,7 @@
       "@assets/*": [ "./assets/*" ],
       "@components/*": [ "./components/*" ],
       "@data/*": [ "./data/*" ],
-      "@helpers/*": [ "./helpers/*" ],
+      "@modules/*": [ "./modules/*" ],
       "@serviceworker/*": [ "./serviceworker/*" ]
     },
     "allowSyntheticDefaultImports": true,
