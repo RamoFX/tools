@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-enum size { small, medium, large, veryLarge }
+export enum size { verysmall, small, medium, large, verylarge }
 
 interface IconProperties {
   path: string,
