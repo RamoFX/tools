@@ -1,14 +1,14 @@
 import React, { FC } from 'react'
 
-export enum size { verysmall, small, medium, large, verylarge }
+export enum IconSize { VerySmall, Small, Medium, Large, VeryLarge  }
 
 interface IconProperties {
   path: string,
-  size: size
+  size: IconSize
 }
 
 const Icon: FC<IconProperties> = ({ path, size }) => (
-  <div className={ `element-icon size-${ size }` }>
+  <div className={ `element-icon size-${ IconSize[size]!.toLowerCase() }` }>
     <svg viewBox='0 0 24 24'>
       <g>
         <path d={ path } />

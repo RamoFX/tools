@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import IconElement, { size } from '@elements/Icon' 
+import IconElement, { IconSize } from '@elements/Icon'
 import { routes } from '../routes'
 
 const Items = () => (
@@ -10,8 +10,14 @@ const Items = () => (
         routes
           .filter((_, idx) => idx < routes.length - 1)
           .map((route, idx) => (
-            <li>
-              <IconElement path={ route.meta.iconPath! } size={ size.small } /><Link to={ route.main.path } key={ idx }>{ route.meta.name }</Link>
+            <li key={ idx }>
+              <Link to={ route.main.path }>
+                <IconElement
+                  path={ route.meta.iconPath! }
+                  size={ IconSize.Small }
+                />
+                <span>{ route.meta.name }</span>
+              </Link>
             </li>
           ))
       }
