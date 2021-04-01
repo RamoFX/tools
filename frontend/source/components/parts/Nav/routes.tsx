@@ -1,33 +1,70 @@
+import { FC } from 'react'
 import HomePage from '@components/pages/Home'
 import ToolsPage from '@components/pages/Tools'
 import ComponentCreatorPage from '@components/pages/ComponentCreator'
 import ContentManagerPage from '@components/pages/ContentManager'
 import NotFoundPage from '@components/pages/NotFound'
+import { mdiHome, mdiTools, mdiPuzzleOutline, mdiContentSaveCogOutline } from '@mdi/js'
 
-export const routes = [
+interface route {
+  main: {
+    path: string,
+    component: FC
+  },
+  meta: {
+    name: string,
+    iconPath?: string
+  }
+}
+
+export const routes: Array<route> = [
   {
-    path: '/',
-    name: 'Home',
-    component: HomePage
+    main: {
+      path: '/',
+      component: HomePage
+    },
+    meta: {
+      name: 'Home',
+      iconPath: mdiHome
+    }
   },
   {
-    path: '/tools',
-    name: 'Tools',
-    component: ToolsPage
+    main: {
+      path: '/tools',
+      component: ToolsPage
+    },
+    meta: {
+      name: 'Tools',
+      iconPath: mdiTools
+    }
   },
   {
-    path: '/component-creator',
-    name: 'Component Creator',
-    component: ComponentCreatorPage
+    main: {
+      path: '/component-creator',
+      component: ComponentCreatorPage
+    },
+    meta: {
+      name: 'ComponentCreator',
+      iconPath: mdiPuzzleOutline
+    }
   },
   {
-    path: '/content-manager',
-    name: 'Content Manager',
-    component: ContentManagerPage
+    main: {
+      path: '/content-manager',
+      component: ContentManagerPage
+    },
+    meta: {
+      name: 'ContentManager',
+      iconPath: mdiContentSaveCogOutline
+    }
   },
   {
-    path: '*',
-    name: 'Not Found',
-    component: NotFoundPage
+    main: {
+      path: '*',
+      component: NotFoundPage
+    },
+    meta: {
+      name: 'Not Found'
+    }
   }
 ]

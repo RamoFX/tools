@@ -8,9 +8,9 @@ const Content = () => (
     <Suspense fallback={ LoadingPage }>
       <Switch>
         {
-          routes.map(({ path, name: _, component: Component }, idx) => (
-            <Route exact={ idx == 0 } path={ path } key={ idx }>
-              <Component />
+          routes.map((route, idx) => (
+            <Route exact={ idx == 0 } path={ route.main.path } key={ idx }>
+              <route.main.component />
             </Route>
           ))
         }
