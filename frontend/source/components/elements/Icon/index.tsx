@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import './style.scss'
 
 export enum IconSize { VerySmall, Small, Medium, Large, VeryLarge  }
 

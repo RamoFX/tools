@@ -1,0 +1,23 @@
+@import '@styles/utils/mixins';
+
+.element-icon {
+  &.size-verysmall {
+    @include size(.75rem);
+  }
+
+  &.size-small {
+    @include size(1rem);
+  }
+
+  &.size-medium {
+    @include size(1.5rem);
+  }
+
+  &.size-large {
+    @include size(2rem);
+  }
+
+  &.size-verylarge {
+    @include size(2.5rem);
+  }
+}
