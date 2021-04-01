@@ -1,9 +1,9 @@
 import { FC } from 'react'
-import HomePage from '@components/pages/Home'
-import ToolsPage from '@components/pages/Tools'
-import ComponentCreatorPage from '@components/pages/ComponentCreator'
-import ContentManagerPage from '@components/pages/ContentManager'
-import NotFoundPage from '@components/pages/NotFound'
+import HomePage from '@pages/Home'
+import ToolsPage from '@pages/Tools'
+import ComponentCreatorPage from '@pages/ComponentCreator'
+import ContentManagerPage from '@pages/ContentManager'
+import NotFoundPage from '@pages/NotFound'
 import { mdiHome, mdiTools, mdiPuzzleOutline, mdiContentSaveCogOutline } from '@mdi/js'
 
 interface route {

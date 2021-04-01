@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import LoadingPage from '@components/pages/Loading'
-import { routes } from '@components/parts/Nav/routes'
+import LoadingPage from '@pages/Loading'
+import { routes } from '@parts/Nav/routes'
 
 const Content = () => (
   <div className='part-content'>

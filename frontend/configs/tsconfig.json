@@ -30,9 +30,13 @@
     "baseUrl": "../source/",
     "paths": {
       "@assets/*": [ "./assets/*" ],
-      "@components/*": [ "./components/*" ],
-      "@data/*": [ "./data/*" ],
-      "@modules/*": [ "./modules/*" ]
+      "@containers/*": [ "./components/containers/*" ],
+      "@elements/*": [ "./components/elements/*" ],
+      "@layouts/*": [ "./components/layouts/*" ],
+      "@pages/*": [ "./components/pages/*" ],
+      "@parts/*": [ "./components/parts/*" ],
+      "@scripts/*": [ "./modules/scripts/*" ],
+      "@styles/*": [ "./modules/styles/*" ]
     },
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

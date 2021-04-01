@@ -70,9 +70,13 @@ module.exports = {
     ],
     alias: {
       '@assets': path('source/assets'),
-      '@components': path('source/components'),
-      '@data': path('source/data'),
-      '@modules': path('source/modules')
+      '@containers': path('source/components/containers'),
+      '@elements': path('source/components/elements'),
+      '@layouts': path('source/components/layouts'),
+      '@pages': path('source/components/pages'),
+      '@parts': path('source/components/parts'),
+      '@scripts': path('source/modules/scripts'),
+      '@styles': path('source/modules/styles')
     }
   }
 }

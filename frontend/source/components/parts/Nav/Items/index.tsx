@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import IconElement, { size } from '@components/elements/Icon'
+import IconElement, { size } from '@elements/Icon' 
 import { routes } from '../routes'
 
 const Items = () => (
