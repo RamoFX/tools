@@ -1,0 +1,11 @@
+@import '@styles/utils/variables';
+
+// stripUnit(16px) == 16
+@function stripUnit($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+// rem(16px) == 1rem
+@function rem($number) {
+  @return #{ stripUnit($number) / stripUnit($fontSizeBase) }rem;
+}

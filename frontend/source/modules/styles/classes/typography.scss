@@ -1,0 +1,21 @@
+@import '@styles/utils/variables';
+@import '@styles/utils/functions';
+
+@each $level, $size in $headingSizes {
+  #{ join(
+    $level '.' + $level,
+    if($level == 'h5', 'p' 'span', ''),
+    comma
+  ) } {
+    font-size: rem($size);
+    font-weight: map-get($fontWeight, 'regular');
+    margin: 0;
+    line-height: rem($size * 1.5);
+  }
+}
+
+@each $level, $weight in $fontWeight {
+  .font-weight-#{$level}, .font-weight-#{$weight}, {
+    font-weight: $weight;
+  }
+}

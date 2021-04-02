@@ -1,0 +1,65 @@
+// basic
+.flex, .row, .rows, .col, .cols {
+  display: flex;
+}
+
+
+
+// direction
+.col, .rows {
+  flex-direction: column;
+}
+
+.row, .cols {
+  flex-direction: row;
+}
+
+
+
+// horizontal alignment
+.jc-fs {
+  justify-content: flex-start;
+}
+
+.jc-fe {
+  justify-content: flex-end;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+
+
+// vertical alignment
+.ac-fs {
+  align-content: flex-start;
+}
+
+.ac-fe {
+  align-content: flex-end;
+}
+
+.ac-sa {
+  align-content: space-around;
+}
+
+.ac-sb {
+  align-content: space-between;
+}
+
+.ac-c {
+  align-content: center;
+}
+
+.ac-c {
+  align-content: stretch;
+}

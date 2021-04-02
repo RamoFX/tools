@@ -1,0 +1,24 @@
+@import './modules/styles/classes/colors';
+@import './modules/styles/classes/flex';
+@import './modules/styles/classes/typography';
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: $fontSizeBase;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
