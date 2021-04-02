@@ -24,7 +24,6 @@ $propertyValuesPair: (
 
 @each $property, $values in $propertyValuesPair {
   $propertyResult: joinList(initialsFromStringList(split($property, '-')), '');
-  @debug $propertyResult;
 
   @each $value in $values {
     $valueResult: null;
