@@ -15,3 +15,9 @@ $headingSizes: (
   'h5': 14px,
   'h6': 13px
 );
+
+$colors: (
+  'main': hsl(200, 30%, 45%),
+  'light': hsl(0, 0%, 75%),
+  'dark': hsl(0, 0%, 15%)
+);

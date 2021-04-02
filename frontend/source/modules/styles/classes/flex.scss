@@ -1,65 +1,42 @@
-// basic
+@import '@styles/utils/functions';
+
+// common
 .flex, .row, .rows, .col, .cols {
   display: flex;
 }
 
-
-
 // direction
-.col, .rows {
+.column, .rows {
   flex-direction: column;
 }
 
-.row, .cols {
+.row, .columns {
   flex-direction: row;
 }
 
+// vertical & horizontal alignment
+$propertyValuesPair: (
+  justify-content: (flex-start, flex-end, center, space-around, space-between),
+  align-content: (flex-start, flex-end, center, space-around, space-between, stretch),
+  align-items: (flex-start, flex-end, center, stretch, baseline),
+  align-self: (flex-start, flex-end, center, stretch, baseline, auto)
+);
 
+@each $property, $values in $propertyValuesPair {
+  $propertyResult: joinList(initialsFromStringList(split($property, '-')), '');
+  @debug $propertyResult;
 
-// horizontal alignment
-.jc-fs {
-  justify-content: flex-start;
-}
+  @each $value in $values {
+    $valueResult: null;
 
-.jc-fe {
-  justify-content: flex-end;
-}
+    @if (str-index($value, '-') != null) {
+      $valueResult: joinList(initialsFromStringList(split($value, '-')), '');
+    } @else {
+      $valueResult: initialFromString($value);
+    }
 
-.jc-sa {
-  justify-content: space-around;
-}
-
-.jc-sb {
-  justify-content: space-between;
-}
-
-.jc-c {
-  justify-content: center;
-}
-
-
-
-// vertical alignment
-.ac-fs {
-  align-content: flex-start;
-}
-
-.ac-fe {
-  align-content: flex-end;
-}
-
-.ac-sa {
-  align-content: space-around;
-}
-
-.ac-sb {
-  align-content: space-between;
-}
-
-.ac-c {
-  align-content: center;
-}
-
-.ac-c {
-  align-content: stretch;
+    .#{$propertyResult}-#{$valueResult} {
+      #{$property}: #{$value};
+    }
+  }
 }

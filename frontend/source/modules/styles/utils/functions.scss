@@ -9,3 +9,67 @@
 @function rem($number) {
   @return #{ stripUnit($number) / stripUnit($fontSizeBase) }rem;
 }
+
+// split('a-b-c', '-') == ('a', 'b', 'c')
+@function split($string, $separator) {
+  $canBeSplitted: str-length($string) > 0 and str-index($string, $separator) != null;
+
+  @if($canBeSplitted) {
+    $result: ();
+
+    @while (str-index($string, $separator) != null) {
+      $currentSeparatorIndex: str-index($string, $separator);
+
+      $result: append($result, str-slice($string, 0, $currentSeparatorIndex - 1), comma);
+      $string: str-slice($string, $currentSeparatorIndex + 1, str-length($string));
+
+      @if (str-index($string, $separator) == null) {
+        $result: append($result, $string, comma);
+      }
+    }
+
+    @return $result;
+  } @else {
+    @return null;
+  }
+}
+
+// firstChar('some string') == 's'
+@function initialFromString($string) {
+  @if (str-length($string) > 0) {
+    @return str-slice($string, 0, 1);
+  } @else {
+    @return null;
+  }
+}
+
+// initialsFromStringList(('Some', 'text')) == ('S', 't')
+@function initialsFromStringList($stringList) {
+  @if (length($stringList) > 0) {
+    $result: ();
+
+    @each $string in $stringList {
+      $result: append($result, initialFromString($string))
+    }
+
+    @return $result;
+  } @else {
+    @return null;
+  }
+}
+
+// joinList(('a', 'b'), ', ') == 'a, b'
+@function joinList($list, $separator) {
+  @if (length($list) > 0) {
+    $result: '';
+
+    @for $i from 0 through length($list) - 1 {
+      $item: nth($list, $i + 1);
+      $result: $result + $item + if($i != length($list) - 1, $separator, '')
+    }
+
+    @return $result;
+  } @else {
+    @return null;
+  }
+}
