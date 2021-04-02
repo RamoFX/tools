@@ -1,6 +1,7 @@
 const { join } = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
+const CleanTerminalPlugin = require('clean-terminal-webpack-plugin')
 
 const path = (...paths) => join(__dirname, '../../', ...(paths || []))
 const env = process.argv[process.argv.length - 1]
@@ -60,6 +61,9 @@ module.exports = {
     new htmlWebpackPlugin({
       template: path('source/index.html'),
       favicon: path('source/assets/favicon.ico')
+    }),
+    new CleanTerminalPlugin({
+      beforeCompile: true
     })
   ],
   resolve: {
