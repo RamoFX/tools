@@ -1,3 +1,5 @@
+@import '@styles/utils/functions';
+
 @mixin size($size) {
   height: $size;
   width: $size;
@@ -54,18 +56,18 @@
   }
 }
 
-@mixin elevatable($color) {
+@mixin elevatable($color, $scaleFactor: 1) {
   $color: transparentize(darken($color, 10%), 0.25);
 
   & {
-    box-shadow: 0 0 .5rem 0 transparentize($color, 0.25);
+    box-shadow: 0 0 1rem 0 transparentize($color, 0.25);
 
     &:hover {
-      box-shadow: 0 .2rem 1rem 0 $color;
+      box-shadow: scaleNumberList(0 .2rem 1rem 0 $color, $scaleFactor);
     }
 
     &:active {
-      box-shadow: 0 .5rem 2rem 0 $color;
+      box-shadow: scaleNumberList(0 .5rem 2rem 0 $color, $scaleFactor);
     }
   }
 }
