@@ -1,0 +1,60 @@
+@import '@styles/utils/variables';
+@import '@styles/utils/mixins';
+
+$colorMain: map-get($colors, 'main');
+
+.element-button {
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  user-select: none;
+  @include transition(normal, (color, background-color, box-shadow));
+
+  &:not(.type-flat) {
+    color: white;
+    border: none;
+    @include clickable($colorMain, 5%, background-color);
+  }
+
+  &.type-flat {
+    border: .125rem $colorMain solid;
+    background-color: rgba(0, 0, 0, 0);
+
+    &:not(.disabled) {
+      @include clickable($colorMain, 10%, (color, border-color));
+      @include transition(normal, (color, border-color, opacity));
+    }
+  }
+
+  &.disabled {
+    filter: grayscale(1);
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &.size-small {
+    padding: 0.375rem 0.833rem;
+
+    &.type-elevatable:not(.disabled) {
+      @include elevatable($colorMain, 0.666);
+    }
+  }
+
+  &.size-medium {
+    padding: 0.75rem 1.666rem;
+
+    &.type-elevatable:not(.disabled) {
+      @include elevatable($colorMain);
+    }
+  }
+
+  &.size-large {
+    padding: 1.1rem 2rem;
+
+    &.type-elevatable:not(.disabled) {
+      @include elevatable($colorMain, 1.333);
+    }
+  }
+}
