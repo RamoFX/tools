@@ -11,7 +11,8 @@
     "url": "git+https://github.com/RamoFX/tools.git"
   },
   "author": "Roman Dvorovoy <roman.dvorovoy123@gmail.com>",
-    "bugs": {
+  "license": "MIT",
+  "bugs": {
     "url": "https://github.com/RamoFX/tools/issues"
   },
   "homepage": "https://github.com/RamoFX/tools#readme",
