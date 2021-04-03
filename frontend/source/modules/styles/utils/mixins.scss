@@ -26,3 +26,46 @@
     transition-property: $properties;
   }
 }
+
+@mixin clickableSingleProperty($color, $step, $property) {
+  $colorHover: adjust-color($color, $saturation: $step, $lightness: -$step);
+  $colorActive: adjust-color($color, $saturation: 2 * $step, $lightness: -2 * $step);
+
+  & {
+    #{ $property }: #{ $color };
+
+    &:hover {
+      #{ $property }: #{ $colorHover };
+    }
+
+    &:active {
+      #{ $property }: #{ $colorActive };
+    }
+  }
+}
+
+@mixin clickable($color, $step, $oneOrMoreProperties) {
+  @if (type-of($oneOrMoreProperties) == string) {
+    @include clickableSingleProperty($color, $step, $oneOrMoreProperties);
+  } @else if (type-of($oneOrMoreProperties) == list) {
+    @each $property in $oneOrMoreProperties {
+      @include clickableSingleProperty($color, $step, $property);
+    }
+  }
+}
+
+@mixin elevatable($color) {
+  $color: transparentize(darken($color, 10%), 0.25);
+
+  & {
+    box-shadow: 0 0 .5rem 0 transparentize($color, 0.25);
+
+    &:hover {
+      box-shadow: 0 .2rem 1rem 0 $color;
+    }
+
+    &:active {
+      box-shadow: 0 .5rem 2rem 0 $color;
+    }
+  }
+}
