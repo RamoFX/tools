@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './style.scss'
-import IconElement, { IconSize } from '@elements/Icon'
+import IconElement from '@elements/Icon'
 import { routes } from '../routes'
 
 const Items = () => (
@@ -13,10 +13,7 @@ const Items = () => (
           .map((route, idx) => (
             <li className='link' key={ idx }>
               <NavLink exact={ true } to={ route.main.path } className='row ai-c'>
-                <IconElement
-                  path={ route.meta.iconPath! }
-                  size={ IconSize.Medium }
-                />
+                <IconElement path={ route.meta.iconPath! } />
                 <span>{ route.meta.name }</span>
               </NavLink>
             </li>
