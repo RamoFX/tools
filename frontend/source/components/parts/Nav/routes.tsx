@@ -4,7 +4,7 @@ import ToolsPage from '@pages/Tools'
 import ComponentCreatorPage from '@pages/ComponentCreator'
 import ContentManagerPage from '@pages/ContentManager'
 import NotFoundPage from '@pages/NotFound'
-import { mdiHome, mdiTools, mdiPuzzleOutline, mdiContentSaveCogOutline } from '@mdi/js'
+import { mdiHome, mdiTools, mdiPuzzle, mdiContentSaveCog } from '@mdi/js'
 
 interface route {
   main: {
@@ -45,7 +45,7 @@ export const routes: Array<route> = [
     },
     meta: {
       name: 'ComponentCreator',
-      iconPath: mdiPuzzleOutline
+      iconPath: mdiPuzzle
     }
   },
   {
@@ -55,7 +55,7 @@ export const routes: Array<route> = [
     },
     meta: {
       name: 'ContentManager',
-      iconPath: mdiContentSaveCogOutline
+      iconPath: mdiContentSaveCog
     }
   },
   {
