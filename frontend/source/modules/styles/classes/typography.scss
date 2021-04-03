@@ -10,7 +10,11 @@
     font-size: rem($size);
     font-weight: map-get($fontWeight, 'regular');
     margin: 0;
-    line-height: rem($size * 1.5);
+    line-height: rem($size * 1.75);
+  }
+
+  .#{$level} {
+    line-height: normal;
   }
 }
 
