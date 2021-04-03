@@ -3,7 +3,7 @@ import HomePage from '@pages/Home'
 import ComponentCreatorPage from '@pages/ComponentCreator'
 import ContentManagerPage from '@pages/ContentManager'
 import NotFoundPage from '@pages/NotFound'
-import { mdiHome, mdiTools, mdiPuzzle, mdiContentSaveCog } from '@mdi/js'
+import { mdiHome, mdiPuzzle, mdiContentSaveCog } from '@mdi/js'
 
 interface route {
   main: {
