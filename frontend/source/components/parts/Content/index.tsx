@@ -7,7 +7,7 @@ const Content = () => (
     <Switch>
       {
         routes.map((route, idx) => (
-          <Route exact={ true } path={ route.main.path } key={ idx } component={route.main.component} />
+          <Route exact={ true } path={ route.main.path } key={ idx } component={ route.main.component } />
         ))
       }
     </Switch>
