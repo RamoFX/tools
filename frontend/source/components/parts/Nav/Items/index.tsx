@@ -1,23 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import './style.scss'
 import IconElement, { IconSize } from '@elements/Icon'
 import { routes } from '../routes'
 
 const Items = () => (
-  <div className='part-nav-items'>
+  <div className='part-nav-items fg-1'>
     <ul>
       {
         routes
           .filter((_, idx) => idx < routes.length - 1)
           .map((route, idx) => (
-            <li key={ idx }>
-              <Link to={ route.main.path }>
+            <li className='link' key={ idx }>
+              <NavLink exact={ true } to={ route.main.path } className='row ai-c'>
                 <IconElement
                   path={ route.meta.iconPath! }
-                  size={ IconSize.Small }
+                  size={ IconSize.Medium }
                 />
                 <span>{ route.meta.name }</span>
-              </Link>
+              </NavLink>
             </li>
           ))
       }

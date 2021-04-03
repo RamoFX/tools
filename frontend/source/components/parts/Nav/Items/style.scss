@@ -1,0 +1,37 @@
+@import '@styles/utils/variables';
+@import '@styles/utils/mixins';
+
+.part-nav-items {
+  height: auto;
+  background-color: map-get($colors, 'dark');
+
+  ul {
+  padding: 1rem 0;
+    li {
+      &:not(.link) {
+        opacity: .75;
+      }
+
+      a {
+        padding: 1rem 2rem;
+        @include color(map-get($colors, 'light'));
+
+        .element-icon {
+          margin-right: 2rem;
+        }
+
+        .element-icon svg, span {
+          @include transition(normal, (color, fill));
+        }
+
+        &.active span {
+          font-weight: map-get($fontWeight, 'bold');
+        }
+
+        &.active, &:hover {
+          @include color(white);
+        }
+      }
+    }
+  }
+}

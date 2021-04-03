@@ -1,0 +1,11 @@
+@import '@styles/utils/variables';
+
+.part-nav-header {
+  color: white;
+  background-color: map-get($colors, 'main');
+  height: 8rem;
+
+  .logo {
+    letter-spacing: .2rem;
+  }
+}

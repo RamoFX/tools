@@ -4,7 +4,7 @@ import NavPart from '@parts/Nav'
 import ContentPart from '@parts/Content'
 
 const Main = () => (
-  <div className='layout-main'>
+  <div className='layout-main columns'>
     <BrowserRouter>
       <NavPart />
       <ContentPart />
