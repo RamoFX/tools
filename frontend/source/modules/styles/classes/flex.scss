@@ -39,3 +39,9 @@ $propertyValuesPair: (
     }
   }
 }
+
+@for $i from 0 through 100 {
+  .fg-#{$i} {
+    flex-grow: $i;
+  }
+}
