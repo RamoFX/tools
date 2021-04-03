@@ -73,3 +73,22 @@
     @return null;
   }
 }
+
+// scaleNumberList((125ms ease-in-out), 2) == (250ms ease-in-out)
+@function scaleNumberList($numberList, $scaleFactor) {
+  $result: ();
+
+  @each $item in $numberList {
+    @if (type-of($item) == number) {
+      $result: append($result, $item * $scaleFactor);
+    } @else {
+      $result: append($result, $item);
+    }
+  }
+
+  @if (length($result) > 0) {
+    @return $result;
+  } @else {
+    @return (null);
+  }
+}
