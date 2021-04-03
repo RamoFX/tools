@@ -1,17 +1,12 @@
-const { join } = require('path')
+const { path } = require('./utils.js')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const CleanTerminalPlugin = require('clean-terminal-webpack-plugin')
 
-const path = (...paths) => join(__dirname, '../../', ...(paths || []))
 const env = process.argv[process.argv.length - 1]
 
 module.exports = {
   entry: path('source/index.tsx'),
-  output: {
-    path: path('production/'),
-    filename: '[name].bundle-[contenthash].js'
-  },
   module: {
     rules: [
       {
