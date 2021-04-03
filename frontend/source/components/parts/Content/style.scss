@@ -1,0 +1,5 @@
+@import '@styles/utils/variables';
+
+.part-content {
+  width: calc(100% - #{ map-get($dimensions, 'nav-width') });
+}
