@@ -1,21 +1,20 @@
 {
-  "name": "healfoodcz",
+  "name": "tools",
   "version": "1.0.0",
-  "description": "healfoodcz website",
+  "description": "Tools for frontend development",
   "scripts": {
     "dev": "./node_modules/.bin/webpack serve --config ./frontend/configs/webpack/webpack.config.js --mode development",
     "build": "./node_modules/.bin/webpack --config ./frontend/configs/webpack/webpack.config.js --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ramofx/healfoodcz.git"
+    "url": "git+https://github.com/RamoFX/tools.git"
   },
-  "keywords": [
-    "paid",
-    "nodejs",
-    "react"
-  ],
   "author": "Roman Dvorovoy <roman.dvorovoy123@gmail.com>",
+    "bugs": {
+    "url": "https://github.com/RamoFX/tools/issues"
+  },
+  "homepage": "https://github.com/RamoFX/tools#readme",
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
