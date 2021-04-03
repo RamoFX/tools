@@ -2,3 +2,27 @@
   height: $size;
   width: $size;
 }
+
+@mixin color($color) {
+  span {
+    color: $color;
+  }
+
+  .element-icon svg {
+    fill: $color;
+  }
+}
+
+@mixin transition($type, $properties: null) {
+  @if ($type == slow) {
+    transition: 500ms ease-in-out;
+  } @else if ($type == normal) {
+    transition: 250ms ease-in-out;
+  } @else if ($type == fast) {
+    transition: 125ms ease-in-out;
+  }
+
+  @if ($properties != null) {
+    transition-property: $properties;
+  }
+}
