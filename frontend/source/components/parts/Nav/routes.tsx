@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import HomePage from '@pages/Home'
-import ToolsPage from '@pages/Tools'
 import ComponentCreatorPage from '@pages/ComponentCreator'
 import ContentManagerPage from '@pages/ContentManager'
 import NotFoundPage from '@pages/NotFound'
@@ -26,16 +25,6 @@ export const routes: Array<route> = [
     meta: {
       name: 'Home',
       iconPath: mdiHome
-    }
-  },
-  {
-    main: {
-      path: '/tools',
-      component: ToolsPage
-    },
-    meta: {
-      name: 'Tools',
-      iconPath: mdiTools
     }
   },
   {
