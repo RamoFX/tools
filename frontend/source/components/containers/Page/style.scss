@@ -3,12 +3,12 @@
 
 .container-page {
   @include size(100%);
-  padding: 4rem 16rem;
+  padding: map-get($dimensions, 'base-spacing') * 2 map-get($dimensions, 'base-spacing') * 8;
   box-sizing: border-box;
   color: map-get($colors, 'dark');
   background-color: map-get($colors, 'bg');
 
   & > *:not(:nth-last-child(1)) {
-    margin-bottom: 2rem;
+    margin-bottom: map-get($dimensions, 'base-spacing');
   }
 }

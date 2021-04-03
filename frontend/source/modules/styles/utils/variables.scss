@@ -18,6 +18,13 @@ $headingSizes: (
 
 $colors: (
   'main': hsl(200, 30%, 45%),
+  'bg': hsl(0, 0%, 90%),
   'light': hsl(0, 0%, 75%),
   'dark': hsl(0, 0%, 15%)
+);
+
+$dimensions: (
+  'base-spacing': 2rem,
+  'nav-width': 20rem,
+  'nav-header-height': 8rem
 );

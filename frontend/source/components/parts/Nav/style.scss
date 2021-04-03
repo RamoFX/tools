@@ -1,5 +1,7 @@
+@import '@styles/utils/variables';
+
 .part-nav {
-    user-select: none;
-    height: 100vh;
-    width: 20rem;
+  user-select: none;
+  height: 100vh;
+  width: map-get($dimensions, 'nav-width');
 }

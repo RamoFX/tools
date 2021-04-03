@@ -3,7 +3,7 @@
 .part-nav-header {
   color: white;
   background-color: map-get($colors, 'main');
-  height: 8rem;
+  height: map-get($dimensions, 'nav-header-height');
 
   .logo {
     letter-spacing: .2rem;

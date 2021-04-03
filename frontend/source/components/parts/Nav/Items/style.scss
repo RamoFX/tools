@@ -6,31 +6,26 @@
   background-color: map-get($colors, 'dark');
 
   ul {
-  padding: 1rem 0;
-    li {
-      &:not(.link) {
-        opacity: .75;
+    padding: #{map-get($dimensions, 'base-spacing') / 2} 0;
+
+    li a {
+      padding: #{map-get($dimensions, 'base-spacing') / 2} map-get($dimensions, 'base-spacing');
+      @include color(map-get($colors, 'light'));
+
+      .element-icon {
+        margin-right: map-get($dimensions, 'base-spacing');
       }
 
-      a {
-        padding: 1rem 2rem;
-        @include color(map-get($colors, 'light'));
+      .element-icon svg, span {
+        @include transition(normal, (color, fill));
+      }
 
-        .element-icon {
-          margin-right: 2rem;
-        }
+      &.active span {
+        font-weight: map-get($fontWeight, 'bold');
+      }
 
-        .element-icon svg, span {
-          @include transition(normal, (color, fill));
-        }
-
-        &.active span {
-          font-weight: map-get($fontWeight, 'bold');
-        }
-
-        &.active, &:hover {
-          @include color(white);
-        }
+      &.active, &:hover {
+        @include color(white);
       }
     }
   }
