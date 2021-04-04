@@ -2,7 +2,7 @@ import React, { MouseEventHandler } from 'react'
 import { useHistory } from 'react-router-dom'
 import TitlesContainer from '@containers/Titles'
 import PageContainer from '@containers/Page'
-import ButtonElement, { ButtonType, ButtonSize } from '@elements/Button'
+import ButtonElement, { ButtonType } from '@elements/Button'
 
 const Home = () => {
   const history = useHistory()
