@@ -3,7 +3,7 @@
 
 .container-page {
   @include size(100%);
-  padding: map-get($dimensions, 'base-spacing') * 2 map-get($dimensions, 'base-spacing') * 8;
+  padding: map-get($dimensions, 'base-spacing') * 4 map-get($dimensions, 'base-spacing') * 8;
   box-sizing: border-box;
   color: map-get($colors, 'dark');
   background-color: map-get($colors, 'bg');
